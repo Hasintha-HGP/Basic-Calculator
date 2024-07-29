@@ -1,0 +1,86 @@
+<html> 
+<head> 
+<title>Basic calculator</title> 
+  <style type="text/css">
+   body{
+    background: linear-gradient(to bottom, #231d0e, #412d15, #8b4828);;
+   }
+   
+   #form{
+    width: 350px;
+    margin: 20vh auto 0 auto;
+    padding: 20px;
+    background-color: aqua;
+    border-radius: 4px;
+    font-size: 12px;
+    
+   }
+   h2{
+    font-size: 50px;
+   }
+   .input{
+    
+    width: 350px;
+    height: 30px;
+   }
+   .select{
+    width: 350px;
+    height: 30px;
+   }
+   .button{
+    width: 350px;
+    height: 30px;
+    font-size: 20px;
+    font-style: bold;
+    color: aliceblue;
+    background-color: rgb(19, 27, 87);
+   }
+  </style>
+  <script type="text/JavaScript">
+          function calculation()
+          {
+            var n1=parseInt(document.getElementById('n1').value);
+            var n2=parseInt(document.getElementById('n2').value);
+            var operator=document.getElementById('operator').value;
+            if (operator === '+') {
+                document.getElementById('result').value=n1+n2;
+            }
+            if(operator === '-') {
+                document.getElementById('result').value=n1-n2;
+            }
+            if (operator === '*') {
+                document.getElementById('result').value=n1*n2;
+            }
+            if(operator === '/') {
+                document.getElementById('result').value=n1/n2;
+            }
+          }
+  </script>
+</head>
+
+<body><div class="main"><form id="form">
+<h2>Basic calculator</h2>
+<hr><br>
+<input class="input" type="text" id="n1">
+<br>
+<br>
+<br>
+<input class="input" type="text" id="n2">
+<br>
+<br>
+<br>
+<select class="select" id="operator">
+    <option value="+">+</option>
+    <option value="-">-</option>
+    <option value="*">*</option>
+    <option value="/">/</option>
+</select>
+<br>
+<br>
+<br>
+<button class="button" onclick="calculation();"><b>Calculation</b></button><br><br><br>
+<input class="input" type="text" id="result" placeholder="Result"/>
+</form>
+</div>
+</body> 
+</html>
